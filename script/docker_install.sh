@@ -1,8 +1,9 @@
 #!/bin/bash
-
+echo Docker Install
 #  Package update 
 
  apt update -y 
+
 
 # Install Prerequisite packages 
 

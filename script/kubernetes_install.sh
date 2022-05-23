@@ -1,7 +1,5 @@
 #!/bin/bash
-
-#!/bin/bash
-
+echo Kubernetes Install
 #  Package update 
 
 sudo apt update -y 

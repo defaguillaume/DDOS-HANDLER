@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo Vegeta Install
 # DL via CURL
 
 curl -LO https://github.com/tsenart/vegeta/releases/download/v12.7.0/vegeta-12.7.0-linux-amd64.tar.gz
