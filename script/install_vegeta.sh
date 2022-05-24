@@ -15,7 +15,7 @@ tar xf vegeta.tar.gz -C vegeta-temp
 
 # Next, move executable file to /usr/local/bin directory.
 
-sudo mv vegeta-temp/vegeta /usr/local/bin
+ mv vegeta-temp/vegeta /usr/local/bin
 
 # Check if vegeta is correctly installed
 

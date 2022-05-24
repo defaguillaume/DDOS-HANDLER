@@ -3,14 +3,14 @@
 read -p "type ip Pod master :" n1
 read -p "type ip Api Server master: " n2
 
-sudo kubeadm init --pod-network-cidr=$n1 --apiserver-advertise-address=$n2
+ kubeadm init --pod-network-cidr=$n1 --apiserver-advertise-address=$n2
 
 mkdir -p $HOME/.kube
  cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
  chown $(id -u):$(id -g) $HOME/.kube/config
  
-sudo kubectl apply -f https://docs.projectcalico.org/v2.6/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
+ kubectl apply -f https://docs.projectcalico.org/v2.6/getting-started/kubernetes/installation/hosted/kubeadm/1.6/calico.yaml
 
-sudo kubectl get namespaces
+ kubectl get namespaces
 
-sudo kubectl get nodes4
+ kubectl get nodes4
