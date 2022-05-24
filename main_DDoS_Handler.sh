@@ -33,24 +33,30 @@ nginx_install() {
 		sh script/nginx_install.sh
 }
 
-master_kub($ipPod, $ipApiServer) {
+master_kub() {
         echo "4 chossen apply KUB master"
-		sh script/kube_config_master.sh $ipPod $ipApiServer
+		sh script/kube_config_master.sh
 }
 
-cluster_kub($ipApiServer) {
+#
+#NGNIX
+#
+#
+#
+
+cluster_kub() {
         echo "6 chossen apply KUB cluster"
-		sh script/kube_config_cluster.sh $ipApiServer
+		sh script/kube_config_cluster.sh
 }
-
+ 
 install_vegeta() {
         echo "7 chossen Vegeta"
 		sh script/install_vegeta.sh
 }
 
-attack_vegeta($second) {
+attack_vegeta() {
         echo "8 chossen Vegeta"
-		sh script/attack_vegeta.sh $second
+		sh script/attack_vegeta.sh
 }
 
 shutdown() {
@@ -107,25 +113,13 @@ do
                 "3") 
                 nginx_install;;
                 "4") 
-				echo "type ip Pod master : \n"
-				read ipPod
-				echo "\n"
-				echo "type ip Api Server master : \n"
-				read ipApiServer
-				echo ""
-                master_kub($ipPod, $ipApiServer);;
+                master_kub;;
                 "5") 
-				echo "choose ip Api Server : \n"
-				read ipApiServer
-				echo ""
-                cluster_kub($ipApiServer);;
+                cluster_kub;;
                 "6") 
                 install_vegeta;;
                 "7")
-				echo "choose second attack : \n"
-				read secondAttack
-				echo ""
-                attack_vegeta($secondAttack);;
+                attack_vegeta;;
                 "8")
                 shutdown;;
                 "Q")   
