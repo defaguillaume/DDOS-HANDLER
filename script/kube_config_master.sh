@@ -11,3 +11,4 @@ sudo kubectl apply -f https://docs.projectcalico.org/v2.6/getting-started/kubern
 sudo kubectl get namespaces
 
 sudo kubectl get nodes
+

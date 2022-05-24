@@ -20,3 +20,4 @@ sudo mv vegeta-temp/vegeta /usr/local/bin
 # Check if vegeta is correctly installed
 
 vegeta --version
+

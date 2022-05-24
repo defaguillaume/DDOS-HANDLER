@@ -61,6 +61,7 @@ sudo bash -c 'cat > /etc/docker/daemon.json <<EOF
 }
 EOF'
 
+
 #Create a systemd directory for Docker
 
 sudo mkdir -p /etc/systemd/system/docker.service.d

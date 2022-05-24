@@ -11,3 +11,5 @@ sudo kubectl get deployments
 sudo kubectl create service nodeport nginx --tcp=80:80
 
 sudo kubectl get svc
+
+
